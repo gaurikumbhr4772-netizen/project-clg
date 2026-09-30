@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+    body{font-family:Arial,sans-serif;line-height:1.6;color:#1e293b;background:#f8fafc}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:18px 8%;background:white;box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top:0;z-index:100}
+    .logo{font-size:24px;font-weight:bold;color:#2563eb}
+    nav ul{display:flex;list-style:none;gap:25px}
+    nav a{text-decoration:none;color:#334155;font-weight:bold}
+    nav a:hover{color:#2563eb}
+    .hero{min-height:85vh;display:flex;align-items:center;padding:60px 8%;background:linear-gradient(135deg,#eff6ff,#f8fafc)}
+    .hero-content{max-width:700px}
+    .tagline{color:#2563eb;font-weight:bold;letter-spacing:2px;margin-bottom:10px}
+    .hero h1{font-size:64px;margin-bottom:15px}
+    .hero h1 span{color:#2563eb}
+    .hero p{font-size:20px;color:#64748b;margin-bottom:25px}
+    .button{display:inline-block;padding:12px 22px;background:#2563eb;color:white;text-decoration:none;border:none;border-radius:8px;cursor:pointer;font-size:16px}
+    .button:hover{background:#1d4ed8}
+    section{padding:80px 8%;text-align:center}
+    section h2{font-size:36px;margin-bottom:20px}
+    section>p{max-width:750px;margin:auto;color:#64748b}
+    .projects{background:#f8fafc}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;max-width:1100px;margin:40px auto 0}
+    .card{background:white;padding:30px;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,.08);transition:.3s}
+    .card:hover{transform:translateY(-5px)}
+    .card h3{color:#2563eb;margin-bottom:10px}
+    .card p{color:#64748b}
+    .contact{background:#eff6ff}
+    .contact .button{margin-top:20px}
+    footer{background:#0f172a;color:white;text-align:center;padding:25px}
+    @media(max-width:700px){
+      nav{flex-direction:column;gap:12px}
+      nav ul{gap:15px;flex-wrap:wrap;justify-content:center}
+      .hero h1{font-size:42px}
+      .cards{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">MyWebsite</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="tagline">WELCOME TO MY WEBSITE</div>
+      <h1>Hello, I'm <span>Your Name</span></h1>
+      <p>A student passionate about technology, design and building useful projects.</p>
+      <a href="#projects" class="button">View My Projects</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I am a student interested in technology and creative problem solving. This website is a simple place to showcase my work, skills and projects.</p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <div class="cards">
+      <div class="card"><h3>Project One</h3><p>A short description of your first project.</p></div>
+      <div class="card"><h3>Project Two</h3><p>A short description of your second project.</p></div>
+      <div class="card"><h3>Project Three</h3><p>A short description of your third project.</p></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: yourname@example.com</p>
+    <button class="button" onclick="showMessage()">Say Hello</button>
+  </section>
+
+  <footer>
+    <p>© 2026 Your Name. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      alert("Thanks for visiting my website!");
+    }
+  </script>
+</body>
+</html>
